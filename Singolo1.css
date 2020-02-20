@@ -141,6 +141,57 @@ h1 span {
   transform: rotate(180deg);
 }
 .slider__img {
+  position: relative;
+}
+.iphone {
+  width: 220px;
+  height: 460px;
+  position: absolute;
+  background-image: url(./assets/images/slider/iPhone.png);
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+.iphone_vertical {
+  top: 53px;
+  left: 113px;
+}
+.iphone_horizontal {
+  transform: rotate(90deg);
+  top: 54px;
+  left: 544px;
+}
+.shadow {
+  width: 240px;
+  height: 490px;
+  position: absolute;
+  background-image: url(./assets/images/slider/ShadowV.png);
+  background-repeat: no-repeat;
+}
+.shadow_vertical {
+  top: 53px;
+  left: 113px;
+}
+.shadow_horizontal {
+  transform: scale(1, -1) rotate(-90deg);
+  top: 48px;
+  left: 552px;
+}
+.display {
+  width: 340px;
+  height: 340px;
+  position: absolute;
+  z-index: 20;
+  background-repeat: no-repeat;
+}
+.display_vertical {
+  top: 115px;
+  left: 124px;
+  background-image: url(./assets/images/slider/displayV.png);
+}
+.display_horizontal {
+  top: 185px;
+  left: 483px;
+  background-image: url(./assets/images/slider/displayH.png);
 }
 
 .services {
@@ -188,9 +239,6 @@ h1 span {
   border-radius: 50%;
   text-align: center;
   padding-top: 12px;
-}
-
-.service__icon img {
 }
 
 .service__description {
