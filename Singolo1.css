@@ -4,6 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: Lato-Semibold;
   src: url(./assets/fonts/Lato-Semibold.ttf);
@@ -93,7 +94,7 @@ a {
 .list-item {
   position: relative;
   margin-left: 31.5px;
-  font-size: 1.14rem;
+  font-size: 1.148rem;
   font-family: Lato-Semibold;
   list-style: none;
   text-decoration: none;
@@ -148,9 +149,11 @@ a {
   right: 3.7%;
   transform: rotate(180deg);
 }
+
 .slider__img {
   position: relative;
 }
+
 .iphone {
   position: absolute;
   z-index: 10;
@@ -159,15 +162,18 @@ a {
   background-image: url(./assets/images/slider/iPhone.png);
   background-repeat: no-repeat;
 }
+
 .iphone_vertical {
   top: 53px;
   left: 112px;
 }
+
 .iphone_horizontal {
   top: 52px;
   left: 540px;
   transform: rotate(90deg);
 }
+
 .shadow {
   position: absolute;
   width: 240px;
@@ -175,15 +181,18 @@ a {
   background-image: url(./assets/images/slider/ShadowV.png);
   background-repeat: no-repeat;
 }
+
 .shadow_vertical {
   top: 53px;
   left: 112px;
 }
+
 .shadow_horizontal {
   top: 49px;
   left: 551px;
   transform: scale(1, -1) rotate(-90deg);
 }
+
 .display {
   position: absolute;
   z-index: 20;
@@ -191,11 +200,13 @@ a {
   height: 340px;
   background-repeat: no-repeat;
 }
+
 .display_vertical {
   top: 115px;
   left: 123px;
   background-image: url(./assets/images/slider/displayV.png);
 }
+
 .display_horizontal {
   top: 185px;
   left: 482px;
@@ -207,12 +218,11 @@ a {
   padding: 59px 30px 0;
   border-bottom: solid 6px #ffffff;
   background-color: #f2f2f2;
+  color: #666d89;
 }
 
 .article {
-  margin-bottom: 47px;
   padding: 0 10px;
-  color: #666d89;
 }
 
 .article__header {
@@ -226,18 +236,22 @@ a {
   line-height: 2.9rem;
   font-family: Lato-Light;
 }
+
 .article__text span {
   word-spacing: -0.1rem;
 }
 
 .layout-3-columns {
   display: flex;
-  margin-bottom: 32px;
+  flex-wrap: wrap;
+  padding-top: 47px;
+
 }
 
 .service {
   display: flex;
-  width: 320px;
+  margin-bottom: 33px;
+
 }
 
 .service__icon {
@@ -250,6 +264,7 @@ a {
   border: solid 1.5px #666d89;
   border-radius: 50%;
 }
+
 .service__icon img[alt="heart"],
 img[alt="bubble"] {
   padding-top: 1px;
@@ -258,14 +273,13 @@ img[alt="bubble"] {
 .service__description {
   width: 220px;
   margin: 0 10px;
-  color: #666d89;
 }
 
 .service__description h3 {
   line-height: 1.5rem;
   font-family: Lato-Black;
   font-weight: bold;
-  word-spacing: -0.1rem;
+  word-spacing: -0.2rem;
 }
 
 .service__description p {
@@ -275,6 +289,7 @@ img[alt="bubble"] {
   font-family: Lato-Regular;
   text-align: justify;
 }
+
 .service__description p span {
   text-align: left;
   word-spacing: -0.1rem;
