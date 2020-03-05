@@ -97,13 +97,15 @@ h2 {
     display: inline-block;
     height: 32px;
     width: 32px;
-    margin-right: 4px;
     border: solid 1px;
     border-radius: 50%;
     background-position: center;
     background-size: 14px;
     background-repeat: no-repeat;
+}
 
+.social :not(:last-child) {
+    margin-right: 4px;
 }
 
 .social__item:hover {
