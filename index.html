@@ -14,31 +14,42 @@
             <h1 class="logo">singolo<span>*</span></h1>
             <nav class="header__nav">
                 <ul class="nav-list">
-                    <li class="list-item list-item_active"><a href="">HOME</a></li>
-                    <li class="list-item"><a href="">SERVICES</a></li>
-                    <li class="list-item"><a href="">PORTFOLIO</a></li>
-                    <li class="list-item"><a href="">ABOUT</a></li>
-                    <li class="list-item"><a href="">CONTACT</a></li>
+                    <li class="list-item list-item_active"><a href="#">HOME</a></li>
+                    <li class="list-item"><a href="#services">SERVICES</a></li>
+                    <li class="list-item"><a href="#portfolio">PORTFOLIO</a></li>
+                    <li class="list-item"><a href="#about">ABOUT</a></li>
+                    <li class="list-item"><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="slider">
+    <div class="slider-wrapper">
         <div class="slider__arrows">
             <a class="arrow arrow_left"></a>
             <a class="arrow arrow_right"></a>
         </div>
-        <div class="slider__img">
-            <div class="iphone iphone_vertical"></div>
-            <div class="shadow shadow_vertical"></div>
-            <div class="display display_vertical"></div>
-            <div class="iphone iphone_horizontal"></div>
-            <div class="shadow shadow_horizontal"></div>
-            <div class="display display_horizontal"></div>
+        <div class="slider">
+            <div class="slider__img">
+                <div class="iphone iphone_vertical">
+                    <div class="iphone__btn" id="verticalPhoneBtn"></div>
+                    <div class="display display_vertical"></div>
+                </div>
+                <div class="shadow shadow_vertical"></div>
+                <div class="iphone iphone_horizontal">
+                    <div class="iphone__btn" id="horizontalPhoneBtn"></div>
+                    <div class="display display_horizontal"></div>
+                </div>
+                <div class="shadow shadow_horizontal"></div>
+            </div>
+            <div class="slider__img">
+                <img src="./assets/images/slider/Slide2.png" alt="">
+            </div>
         </div>
     </div>
+
     <section class="services">
+        <a name="services" class="anchor"></a>
         <div class="article">
             <h2 class="article__header">Our Services</h2>
             <p class="article__text">
@@ -141,6 +152,7 @@
     <!-- part 2-->
 
     <section class="portfolio">
+        <a name="portfolio" class="anchor"></a>
         <div class="article">
             <h2 class="article__header">Portfolio</h2>
             <p class="article__text">
@@ -190,14 +202,11 @@
             <div class="portfolio__image">
                 <img src="./assets/images/portfolio/Project-12.png" alt="Project-12">
             </div>
-            <!-- additional img-->
-            <div class="portfolio__image">
-                <img src="./assets/images/portfolio/Project-12.png" alt="Project-12">
-            </div>
         </div>
     </section>
 
     <section class="about-us">
+        <a name="about" class="anchor"></a>
         <div class="article">
             <h2 class="article__header">About Us</h2>
             <p class="article__text">
@@ -276,6 +285,7 @@
     <!--part 3-->
 
     <section class="get-a-quote">
+        <a name="contact" class="anchor"></a>
         <div class="article">
             <h2 class="article__header">Get a Quote</h2>
             <p class="article__text">
@@ -285,13 +295,15 @@
                     tortor mauris condimentum nibh.</span>
             </p>
         </div>
+
         <div class="contacts-block">
+
             <div class="contact-form">
                 <form action="#" method="POST" class="form">
-                    <input type="text" class="form__item" id="form-name" placeholder="Name (Required)" required>
-                    <input type="email" class="form__item" id="form-email" placeholder="Email (Required)" required>
-                    <input type="text" class="form__item" id="form-subject" placeholder="Subject">
-                    <textarea class="form__item form__item_textarea" id="form-descr"
+                    <input type="text" class="form__item" id="name" placeholder="Name (Required)" required>
+                    <input type="email" class="form__item" id="email" placeholder="Email (Required)" required>
+                    <input type="text" class="form__item" id="subject" placeholder="Subject">
+                    <textarea class="form__item form__item_textarea" id="description"
                         placeholder="Describe your project in detail..." cols="30" rows="50"></textarea>
                     <button class="form__item form__item_submit" type="submit">Submit</button>
 
@@ -347,6 +359,10 @@
         </div>
 
     </footer>
+    <div class="popup-wrapper">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
