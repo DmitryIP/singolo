@@ -10,30 +10,77 @@ function menuSwitch(event) {
 
     }
 
-
 };
-
-
 
 //--slider
-let left = document.querySelector('.arrow_left');
-let right = document.querySelector('.arrow_right');
+let leftArrow = document.querySelector('.arrow_left');
+let rightArrow = document.querySelector('.arrow_right');
 let slider = document.querySelector('.slider');
-let sliderLength = document.querySelectorAll('.slider__img').length;
-let position = 0;
-left.addEventListener('click', slideLeft, false);
-right.addEventListener('click', slideRight, false);
-
+let slides = document.querySelectorAll('.slider__img');
+let sliderLength = slides.length;
+leftArrow.addEventListener('click', slideLeft, false);
+rightArrow.addEventListener('click', slideRight, false);
+let current = 0;
+let transitAnimation = `transform 0.5s linear`;
 
 function slideLeft() {
-    slider.append(document.querySelectorAll('.slider__img')[0]);
+    if (current < sliderLength - 1) {
+        current++;
+        goLeft();
+    } else {
+        current = 0;
+        jumpRight();
+        setTimeout(slideLeft, 10);
+
+    }
 
 };
-
 
 function slideRight() {
-    slider.prepend(document.querySelectorAll('.slider__img')[sliderLength - 1]);
+    if (current >= sliderLength - 1) {
+        current = 0;
+        goRight();
+    } else {
+        current++;
+        jumpLeft();
+        setTimeout(slideRight, 10);
+
+    }
 };
+
+function goLeft() {
+    console.log(`translateX(-${current*100}%)`);
+    slides.forEach(slide => {
+        slide.style.transition = transitAnimation;
+        slide.style.transform = `translateX(-${current*100}%)`;
+    })
+}
+
+function goRight() {
+    console.log(`translateX(*${current*100}%)`);
+    slides.forEach(slide => {
+        slide.style.transition = transitAnimation;
+        slide.style.transform = `translateX(${current*100}%)`;
+    })
+}
+
+function jumpLeft() {
+    slider.prepend(document.querySelectorAll('.slider__img')[current]);
+    slides.forEach(slide => {
+        slide.style.transition = ``;
+        slide.style.transform = `translateX(-${current*100}%)`;
+    })
+
+}
+
+function jumpRight() {
+    slider.append(document.querySelectorAll('.slider__img')[current]);
+    slides.forEach(slide => {
+        slide.style.transition = ``;
+        slide.style.transform = ``;
+    })
+
+}
 
 //--slider--screen switch
 verticalPhoneBtn.addEventListener('click', screenSwith, false);
@@ -85,7 +132,7 @@ function lightImg(event) {
 let form = document.querySelector('.form');
 form.addEventListener('submit', message, false);
 
-console.log(document.querySelector('.popup'));
+
 
 function message(event) {
     event.preventDefault();

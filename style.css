@@ -160,12 +160,15 @@ header {
   position: relative;
   display: flex;
   height: 100%;
-  transition: transform 1s linear;
+}
+.slider__img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.slider__img {
+.phone-picture {
   position: relative;
-  flex-shrink: 0;
   width: 100%;
   height: 100%;
   background-color: #f06c64;

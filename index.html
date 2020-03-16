@@ -31,16 +31,18 @@
         </div>
         <div class="slider">
             <div class="slider__img">
-                <div class="iphone iphone_vertical">
-                    <div class="iphone__btn" id="verticalPhoneBtn"></div>
-                    <div class="display display_vertical"></div>
+                <div class="phone-picture">
+                    <div class="iphone iphone_vertical">
+                        <div class="iphone__btn" id="verticalPhoneBtn"></div>
+                        <div class="display display_vertical"></div>
+                    </div>
+                    <div class="shadow shadow_vertical"></div>
+                    <div class="iphone iphone_horizontal">
+                        <div class="iphone__btn" id="horizontalPhoneBtn"></div>
+                        <div class="display display_horizontal"></div>
+                    </div>
+                    <div class="shadow shadow_horizontal"></div>
                 </div>
-                <div class="shadow shadow_vertical"></div>
-                <div class="iphone iphone_horizontal">
-                    <div class="iphone__btn" id="horizontalPhoneBtn"></div>
-                    <div class="display display_horizontal"></div>
-                </div>
-                <div class="shadow shadow_horizontal"></div>
             </div>
             <div class="slider__img">
                 <img src="./assets/images/slider/Slide2.png" alt="">
@@ -302,7 +304,7 @@
                 <form action="#" method="POST" class="form">
                     <input type="text" class="form__item" id="name" placeholder="Name (Required)" required>
                     <input type="email" class="form__item" id="email" placeholder="Email (Required)" required>
-                    <input type="text" class="form__item" id="subject" placeholder="Subject">
+                    <input type="text" class="form__item" id="subject" placeholder="Subject" maxlength="100">
                     <textarea class="form__item form__item_textarea" id="description"
                         placeholder="Describe your project in detail..." cols="30" rows="50"></textarea>
                     <button class="form__item form__item_submit" type="submit">Submit</button>
