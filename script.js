@@ -17,55 +17,44 @@ let leftArrow = document.querySelector('.arrow_left');
 let rightArrow = document.querySelector('.arrow_right');
 let slider = document.querySelector('.slider');
 let slides = document.querySelectorAll('.slider__img');
-let sliderLength = slides.length;
 let current = 0;
-let lastIndex = sliderLength - 1;
+let lastIndex = slides.length - 1;
 let animation = `transform 1s linear`;
 
 leftArrow.addEventListener('click', slideLeft, false);
 rightArrow.addEventListener('click', slideRight, false);
 
 function slideLeft() {
-    if (current < sliderLength - 1) {
+    if (current < lastIndex) {
         current++;
-        console.log('l- ' + current);
         goLeft();
 
     } else {
         jumpRight();
         setTimeout(slideLeft, 10);
-
     }
 
 };
 
 function goLeft() {
-    slides.forEach(slide => {
-        slide.style.transition = animation;
-        slide.style.transform = `translateX(-${current*100}%)`;
-    })
+    slider.style.transition = animation;
+    slider.style.transform = `translateX(-${current*100}%)`;
 }
 
 function jumpRight() {
     slider.append(document.querySelectorAll('.slider__img')[0]);
     current--;
-    console.log('r- ' + current);
-    slides.forEach(slide => {
-        slide.style.transition = ``;
-        slide.style.transform = `translateX(-${current*100}%)`;
-    })
-
+    slider.style.transition = ``;
+    slider.style.transform = `translateX(-${current*100}%)`;
 }
 
 function slideRight() {
     if (current > 0) {
         current--;
-        console.log('r- ' + current);
         goRight();
 
     } else {
         current++;
-        console.log('r- ' + current);
         jumpLeft();
         setTimeout(slideRight, 10);
 
@@ -73,23 +62,14 @@ function slideRight() {
 };
 
 function goRight() {
-    console.log(`translateX(${current*100}%)`);
-    console.log('r- ' + current);
-    slides.forEach(slide => {
-        slide.style.transition = animation;
-        slide.style.transform = `translateX(-${current*100}%)`;
-    })
+    slider.style.transition = animation;
+    slider.style.transform = `translateX(-${current*100}%)`;
 }
 
 function jumpLeft() {
     slider.prepend(document.querySelectorAll('.slider__img')[lastIndex]);
-
-    console.log('l- ' + current);
-    slides.forEach(slide => {
-        slide.style.transition = ``;
-        slide.style.transform = `translateX(-100%)`;
-    })
-
+    slider.style.transition = ``;
+    slider.style.transform = `translateX(-100%)`;
 }
 
 
