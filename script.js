@@ -18,17 +18,20 @@ let rightArrow = document.querySelector('.arrow_right');
 let slider = document.querySelector('.slider');
 let slides = document.querySelectorAll('.slider__img');
 let sliderLength = slides.length;
+let current = 0;
+let lastIndex = sliderLength - 1;
+let animation = `transform 1s linear`;
+
 leftArrow.addEventListener('click', slideLeft, false);
 rightArrow.addEventListener('click', slideRight, false);
-let current = 0;
-let transitAnimation = `transform 0.5s linear`;
 
 function slideLeft() {
     if (current < sliderLength - 1) {
         current++;
+        console.log('l- ' + current);
         goLeft();
+
     } else {
-        current = 0;
         jumpRight();
         setTimeout(slideLeft, 10);
 
@@ -36,51 +39,61 @@ function slideLeft() {
 
 };
 
+function goLeft() {
+    slides.forEach(slide => {
+        slide.style.transition = animation;
+        slide.style.transform = `translateX(-${current*100}%)`;
+    })
+}
+
+function jumpRight() {
+    slider.append(document.querySelectorAll('.slider__img')[0]);
+    current--;
+    console.log('r- ' + current);
+    slides.forEach(slide => {
+        slide.style.transition = ``;
+        slide.style.transform = `translateX(-${current*100}%)`;
+    })
+
+}
+
 function slideRight() {
-    if (current >= sliderLength - 1) {
-        current = 0;
+    if (current > 0) {
+        current--;
+        console.log('r- ' + current);
         goRight();
+
     } else {
         current++;
+        console.log('r- ' + current);
         jumpLeft();
         setTimeout(slideRight, 10);
 
     }
 };
 
-function goLeft() {
-    console.log(`translateX(-${current*100}%)`);
-    slides.forEach(slide => {
-        slide.style.transition = transitAnimation;
-        slide.style.transform = `translateX(-${current*100}%)`;
-    })
-}
-
 function goRight() {
-    console.log(`translateX(*${current*100}%)`);
+    console.log(`translateX(${current*100}%)`);
+    console.log('r- ' + current);
     slides.forEach(slide => {
-        slide.style.transition = transitAnimation;
-        slide.style.transform = `translateX(${current*100}%)`;
+        slide.style.transition = animation;
+        slide.style.transform = `translateX(-${current*100}%)`;
     })
 }
 
 function jumpLeft() {
-    slider.prepend(document.querySelectorAll('.slider__img')[current]);
+    slider.prepend(document.querySelectorAll('.slider__img')[lastIndex]);
+
+    console.log('l- ' + current);
     slides.forEach(slide => {
         slide.style.transition = ``;
-        slide.style.transform = `translateX(-${current*100}%)`;
+        slide.style.transform = `translateX(-100%)`;
     })
 
 }
 
-function jumpRight() {
-    slider.append(document.querySelectorAll('.slider__img')[current]);
-    slides.forEach(slide => {
-        slide.style.transition = ``;
-        slide.style.transform = ``;
-    })
 
-}
+
 
 //--slider--screen switch
 verticalPhoneBtn.addEventListener('click', screenSwith, false);
