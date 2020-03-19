@@ -40,6 +40,7 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -58,11 +59,13 @@ a {
   color: inherit;
   cursor: pointer;
 }
+
 header {
   position: sticky;
   top: 0;
   z-index: 900;
 }
+
 .header {
   height: 95px;
   display: flex;
@@ -156,11 +159,13 @@ header {
   right: 3.7%;
   transform: rotate(180deg);
 }
+
 .slider {
   position: relative;
   display: flex;
   height: 100%;
 }
+
 .slider__img {
   flex-shrink: 0;
   width: 100%;
@@ -194,6 +199,7 @@ header {
   left: 540px;
   transform: rotate(90deg);
 }
+
 .iphone__btn {
   position: absolute;
   height: 42px;
@@ -202,6 +208,7 @@ header {
   top: 407px;
   left: 86px;
 }
+
 .iphone__btn:hover {
   cursor: pointer;
 }
@@ -367,6 +374,7 @@ h2 {
   color: #ffffff;
   border-color: #ffffff;
 }
+
 .filter__button:focus {
   outline: none;
 }
@@ -574,12 +582,14 @@ h2 {
 .social_footer {
   padding-top: 3px;
 }
+
 .popup-wrapper {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
 .popup {
   position: fixed;
   top: 25%;
@@ -597,17 +607,20 @@ h2 {
   border-radius: 5px;
   box-shadow: 0 0 5px 1px;
 }
+
 .popup button {
   align-self: center;
   margin-top: 20px;
   width: 100px;
 }
+
 .popup p,
 button {
   max-height: 150px;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .anchor {
   position: relative;
   top: -125px;
