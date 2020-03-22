@@ -1,0 +1,24 @@
+.phone-picture {
+    border: 1px solid blue;
+}
+
+.iphone {
+    border: 1px solid black;
+}
+
+
+.iphone__btn_vertical,
+.iphone__btn_horizontal {
+    border: 1px solid black;
+}
+
+
+.shadow {
+    border: 1px solid black;
+}
+
+
+
+.display {
+    border: 1px solid black;
+}

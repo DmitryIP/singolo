@@ -166,6 +166,6 @@ function message(event) {
 function removePopup() {
   document.querySelector(".popup").remove();
   document.querySelectorAll(".form__item").forEach(item => {
-    console.log((item.value = ""));
+    item.value = "";
   });
 }
