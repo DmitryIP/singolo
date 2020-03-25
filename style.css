@@ -75,6 +75,9 @@ header {
   border-bottom: solid 6px #323746;
   background-color: #2d303a;
 }
+.menu-toggle {
+  display: none;
+}
 
 .logo {
   padding: 0 10px;
@@ -186,7 +189,6 @@ header {
   width: 100%;
   padding-top: 58.25%;
   background-color: #f06c64;
-
 }
 
 .iphone {
@@ -210,7 +212,6 @@ header {
   top: 29.8%;
   left: 41.6%;
   background-image: url(./assets/images/slider/iPhoneH.png);
-
 }
 
 .iphone__btn {
@@ -385,15 +386,15 @@ h2 {
 .layout-4-columns {
   display: flex;
   flex-wrap: wrap;
-  max-height: 620px;
-  overflow: hidden;
+}
+.portfolio__image:nth-child(n + 13) {
+  display: none;
 }
 
 .portfolio__image {
   flex: 1 0 20%;
   height: 187px;
   margin: 10px;
-
 }
 
 .portfolio__image img {
@@ -403,7 +404,7 @@ h2 {
 }
 
 .about-us {
-  padding: 59px 30px 63px;
+  padding: 59px 30px 18px;
   border-bottom: solid 6px #ffffff;
   background-color: #f2f2f2;
   color: #666d89;
@@ -415,7 +416,6 @@ h2 {
   padding: 45px 10px;
 }
 
-
 .person {
   display: flex;
   flex-direction: column;
@@ -425,19 +425,15 @@ h2 {
 
 .person:first-child {
   margin-left: 0;
-
 }
 
 .person:last-child {
   margin-right: 0;
-
 }
 
-
 .person__photo {
-  height: 26.6vw;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   overflow: hidden;
 }
 
@@ -446,7 +442,6 @@ h2 {
   height: 100%;
   object-fit: cover;
 }
-
 
 .person-description {
   padding-bottom: 24px;
@@ -540,7 +535,9 @@ h2 {
   width: 22%;
   margin-bottom: 15px;
   padding-right: 15px;
+  background-color: #fbc65f;
   color: #f48c8f;
+  text-transform: uppercase;
 }
 
 .form__item_submit:hover {
@@ -657,15 +654,16 @@ button {
   top: -125px;
 }
 
-@media (max-width: 790px) {
+@media (min-width: 768px) and (max-width: 1019px) {
+  .nav-list {
+    padding-top: 3px;
+  }
   .slider-wrapper {
     height: 57.4vw;
-
   }
 
   .services {
     padding: 42px 30px 23px;
-
   }
 
   .layout-2-columns-sm {
@@ -679,11 +677,9 @@ button {
 
   .portfolio {
     padding: 54px 30px 59px;
-
   }
 
   .layout-3-columns-sm {
-    max-height: 823px;
     margin-top: 10px;
   }
 
@@ -701,7 +697,6 @@ button {
   }
 
   .person__photo {
-    height: 27.8vw;
     width: 100%;
     margin-bottom: 13px;
   }
@@ -713,6 +708,212 @@ button {
   .person-description .description__text {
     padding-top: 0px;
   }
+  .get-a-quote {
+    padding: 52px 30px 27px;
+  }
+  .contacts-block {
+    padding-top: 24px;
+  }
+  .form__item {
+    width: 100%;
+    margin-bottom: 12px;
+    padding-left: 9px;
+  }
+  .form__item_textarea {
+    margin-bottom: 17px;
+  }
+  .form__item_submit {
+    width: 30%;
+  }
+  .contact-information .description__text {
+    padding-top: 0px;
+    line-height: 2.2rem;
+  }
+  .contact-details {
+    padding-top: 11px;
+  }
+}
 
+@media (max-width: 767px) {
+  .anchor {
+    top: -100px;
+  }
+  .header {
+    height: 71px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: none;
+  }
 
+  .menu-toggle {
+    position: absolute;
+    left: 20px;
+    display: block;
+    width: 25px;
+    height: 20px;
+    background-image: url(./assets/images/menu/Burger-menu-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 30;
+    transition: transform 0.5s linear;
+  }
+  .menu-toggle:hover {
+    cursor: pointer;
+  }
+  .logo {
+    position: absolute;
+    font-size: 1.9rem;
+    padding-right: 0;
+    z-index: 30;
+    transition: all 0.5s linear;
+  }
+  .header__nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    padding: 0;
+    z-index: -10;
+  }
+  .nav-list {
+    position: relative;
+    height: 100vh;
+    width: 71vw;
+    flex-direction: column;
+    padding: 217px 0 0 42px;
+    background-color: #2d303a;
+    transition: transform 0.5s linear;
+    box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .list-item {
+    position: relative;
+    margin-left: 31.5px;
+    font-family: Lato-Semibold;
+    font-size: 2.4rem;
+    line-height: 5.7rem;
+    letter-spacing: -0.035em;
+  }
+  .list-item::before {
+    display: none;
+  }
+  .slider-wrapper {
+    height: 56.1vw;
+    border-bottom: none;
+  }
+  .arrow_left {
+    top: 43%;
+    left: 1.9%;
+  }
+
+  .arrow_right {
+    top: 43.4%;
+    right: 2.4%;
+  }
+
+  .services {
+    padding: 26px 20px 2px;
+    border-bottom: none;
+  }
+  .layout-1-column-xs {
+    padding-top: 27px;
+  }
+
+  .service {
+    margin-bottom: 29px;
+    width: 100%;
+  }
+  .service-description {
+    width: 100%;
+  }
+
+  .portfolio {
+    padding: 42px 30px 26px;
+    border-bottom: 0;
+  }
+  .portfolio .article {
+    padding: 0;
+  }
+  .filter {
+    padding: 16px 0px 9px;
+  }
+
+  .layout-2-columns-xs {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  .portfolio__image {
+    flex: 1 0 40%;
+    height: 33vw;
+    margin: 0 14px 13px 0;
+  }
+
+  .portfolio__image:nth-child(n + 9) {
+    display: none;
+  }
+  .portfolio__image:nth-child(2n) {
+    margin-right: 0;
+  }
+  .about-us {
+    padding: 33px 20px 11px;
+    border-bottom: 0;
+  }
+  .about-us-1-column {
+    padding: 25px 10px 0px;
+    justify-content: center;
+  }
+  .person {
+    width: 100%;
+    max-width: 390px;
+    margin: 0 0 24px 0;
+  }
+  .person__photo {
+    width: 100%;
+  }
+  .person-description {
+    padding-bottom: 12px;
+  }
+
+  .person-description .description__text {
+    padding-top: 2px;
+  }
+  .get-a-quote {
+    padding: 44px 20px 41px;
+    border-bottom: 0;
+  }
+  .contacts-block {
+    flex-wrap: wrap;
+    padding-top: 21px;
+  }
+  .form__item {
+    width: 100%;
+    margin-bottom: 12px;
+    padding-left: 9px;
+  }
+  .form__item_textarea {
+    margin-bottom: 15px;
+  }
+  .form__item_submit {
+    line-height: 4.6rem;
+  }
+  .contact-information {
+    margin-top: 19px;
+    width: 100%;
+  }
+  .contact-information .description__text {
+    padding-top: 0px;
+    line-height: 2.2rem;
+  }
+  .contact-details {
+    padding-top: 11px;
+    line-height: 2.45rem;
+  }
+  .copyright {
+    display: none;
+  }
+  .footer {
+    justify-content: center;
+  }
 }

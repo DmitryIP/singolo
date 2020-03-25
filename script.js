@@ -14,6 +14,7 @@ function menuSwitch(event) {
 
 //--scroll
 document.addEventListener("scroll", onScroll, false);
+
 function onScroll(event) {
   const currentPos = window.scrollY + 95;
   const anchors = document.querySelectorAll(".anchor");
@@ -147,12 +148,12 @@ form.addEventListener("submit", message, false);
 
 function message(event) {
   event.preventDefault();
-  let subjectText = subject.value
-    ? `Subject: ${subject.value}`
-    : "Without subject";
-  let descriptionText = description.value
-    ? `Description: ${description.value}`
-    : "Without description";
+  let subjectText = subject.value ?
+    `Subject: ${subject.value}` :
+    "Without subject";
+  let descriptionText = description.value ?
+    `Description: ${description.value}` :
+    "Without description";
   let message = `<div class="popup"><p>The Letter Was Sent</p><p class="description__text">${subjectText}</p><p class="description__text">${descriptionText}</p><button onclick="removePopup()">OK</button></div>`;
   if (document.querySelector(".popup") === null) {
     document
@@ -168,4 +169,43 @@ function removePopup() {
   document.querySelectorAll(".form__item").forEach(item => {
     item.value = "";
   });
+}
+
+//-menu--toggle
+
+let burger = document.querySelector(".menu-toggle");
+let menu = document.querySelector(".nav-list");
+let logo = document.querySelector(".logo");
+let menuBgr = document.querySelector(".header__nav");
+let flag = 0;
+
+burger.addEventListener('click', menuToggle, false);
+
+function menuToggle(event) {
+  (flag === 0) ? menuShow(): menuHide();
+}
+
+function menuShow() {
+  menu.style.transform = "translateX(134%)";
+  logo.style.transform = "translateX(-75px)";
+  burger.style.transform = "rotate(90deg)";
+  menuBgr.style.width = "200%";
+  menuBgr.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+  flag = 1;
+}
+
+function menuHide() {
+  menu.style.transform = "translateX(0px)";
+  logo.style.transform = "";
+  burger.style.transform = "";
+  menuBgr.style.width = "";
+  menuBgr.style.backgroundColor = "";
+  flag = 0;
+}
+menu.onclick = function (event) {
+  if (event.target.tagName === "A") {
+    (flag === 1) ? menuHide(): null;
+  }
+
+
 }
