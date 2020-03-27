@@ -75,6 +75,7 @@ header {
   border-bottom: solid 6px #323746;
   background-color: #2d303a;
 }
+
 .menu-toggle {
   display: none;
 }
@@ -387,6 +388,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
 }
+
 .portfolio__image:nth-child(n + 13) {
   display: none;
 }
@@ -658,6 +660,7 @@ button {
   .nav-list {
     padding-top: 3px;
   }
+
   .slider-wrapper {
     height: 57.4vw;
   }
@@ -708,27 +711,34 @@ button {
   .person-description .description__text {
     padding-top: 0px;
   }
+
   .get-a-quote {
     padding: 52px 30px 27px;
   }
+
   .contacts-block {
     padding-top: 24px;
   }
+
   .form__item {
     width: 100%;
     margin-bottom: 12px;
     padding-left: 9px;
   }
+
   .form__item_textarea {
     margin-bottom: 17px;
   }
+
   .form__item_submit {
     width: 30%;
   }
+
   .contact-information .description__text {
     padding-top: 0px;
     line-height: 2.2rem;
   }
+
   .contact-details {
     padding-top: 11px;
   }
@@ -738,6 +748,7 @@ button {
   .anchor {
     top: -100px;
   }
+
   .header {
     height: 71px;
     justify-content: center;
@@ -758,9 +769,11 @@ button {
     z-index: 30;
     transition: transform 0.5s linear;
   }
+
   .menu-toggle:hover {
     cursor: pointer;
   }
+
   .logo {
     position: absolute;
     font-size: 1.9rem;
@@ -768,6 +781,7 @@ button {
     z-index: 30;
     transition: all 0.5s linear;
   }
+
   .header__nav {
     position: fixed;
     top: 0;
@@ -776,6 +790,7 @@ button {
     padding: 0;
     z-index: -10;
   }
+
   .nav-list {
     position: relative;
     height: 100vh;
@@ -795,13 +810,16 @@ button {
     line-height: 5.7rem;
     letter-spacing: -0.035em;
   }
+
   .list-item::before {
     display: none;
   }
+
   .slider-wrapper {
     height: 56.1vw;
     border-bottom: none;
   }
+
   .arrow_left {
     top: 43%;
     left: 1.9%;
@@ -816,6 +834,7 @@ button {
     padding: 26px 20px 2px;
     border-bottom: none;
   }
+
   .layout-1-column-xs {
     padding-top: 27px;
   }
@@ -824,6 +843,7 @@ button {
     margin-bottom: 29px;
     width: 100%;
   }
+
   .service-description {
     width: 100%;
   }
@@ -832,9 +852,11 @@ button {
     padding: 42px 30px 26px;
     border-bottom: 0;
   }
+
   .portfolio .article {
     padding: 0;
   }
+
   .filter {
     padding: 16px 0px 9px;
   }
@@ -844,6 +866,7 @@ button {
     justify-content: space-between;
     margin-top: 16px;
   }
+
   .portfolio__image {
     flex: 1 0 40%;
     height: 33vw;
@@ -853,25 +876,31 @@ button {
   .portfolio__image:nth-child(n + 9) {
     display: none;
   }
+
   .portfolio__image:nth-child(2n) {
     margin-right: 0;
   }
+
   .about-us {
     padding: 33px 20px 11px;
     border-bottom: 0;
   }
+
   .about-us-1-column {
     padding: 25px 10px 0px;
     justify-content: center;
   }
+
   .person {
     width: 100%;
     max-width: 390px;
     margin: 0 0 24px 0;
   }
+
   .person__photo {
     width: 100%;
   }
+
   .person-description {
     padding-bottom: 12px;
   }
@@ -879,41 +908,58 @@ button {
   .person-description .description__text {
     padding-top: 2px;
   }
+
   .get-a-quote {
     padding: 44px 20px 41px;
     border-bottom: 0;
   }
+
   .contacts-block {
     flex-wrap: wrap;
     padding-top: 21px;
   }
+
   .form__item {
     width: 100%;
     margin-bottom: 12px;
     padding-left: 9px;
   }
+
   .form__item_textarea {
     margin-bottom: 15px;
   }
+
   .form__item_submit {
     line-height: 4.6rem;
   }
+
   .contact-information {
     margin-top: 19px;
     width: 100%;
   }
+
   .contact-information .description__text {
     padding-top: 0px;
     line-height: 2.2rem;
   }
+
   .contact-details {
     padding-top: 11px;
     line-height: 2.45rem;
   }
+
   .copyright {
     display: none;
   }
+
   .footer {
     justify-content: center;
+  }
+}
+
+@media(max-width:373px) {
+  .filter__button {
+    margin-right: 0;
+    padding: 0 3px
   }
 }
